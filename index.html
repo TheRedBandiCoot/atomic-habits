@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon"
+        href="https://m.media-amazon.com/images/I/51-nXsSRfZL._SY264_BO1,204,203,200_QL40_FMwebp_.jpg"
+        type="image/x-icon">
+    <title>Atomic Habits (James Clear)</title>
+    <style>
+        body {
+            background-color: black;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        input,
+        button {
+            outline: none;
+            padding: 15px;
+            border-radius: 10px;
+            margin-left: 5px;
+            font-size: 1.2rem;
+            border: none;
+            font-weight: 900;
+            background-color: rgb(49, 49, 49);
+            color: rgb(225, 190, 190);
+            cursor: text;
+        }
+
+        .card button {
+            cursor: pointer;
+            transition: .3s;
+        }
+
+        .card button:hover {
+            color: rgb(237, 164, 164);
+            background-color: rgb(76, 76, 76);
+        }
+
+        input[type="number"]::-webkit-inner-spin-button {
+            display: none;
+        }
+
+        p {
+            font-size: 1.1rem;
+            letter-spacing: 3px;
+            color: red;
+            display: none;
+        }
+
+        @media (max-width: 474px) {
+            form {
+                display: flex;
+                flex-direction: column;
+            }
+
+            form>* {
+                margin-bottom: 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card">
+        <form>
+            <input class="number" placeholder="Add Pin" type="number">
+            <button>Submit</button>
+        </form>
+        <p>incorrect Pin</p>
+    </div>
+    <script>
+        let form = document.querySelector("form");
+        let number = document.querySelector(".number");
+        let p = document.querySelector("p");
+        form.addEventListener("submit", (e) => {
+            e.preventDefault();
+            if (number.value !== "1694045460") {
+                p.style.display = "block";
+            } else {
+                p.style.display = "none";
+                location.replace("https://bit.ly/3VuEi7O")
+            }
+        })
+    </script>
+</body>
+
+</html>
